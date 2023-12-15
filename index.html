@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="EMAGE: Towards Unified Holistic Co-Speech Gesture Generation via Expressive Masked Audio Gesture Modeling">
+  <meta name="keywords" content="EMAGE, Co-Speech Gesture Generation, Animation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMAGE</title>
+
+  <style>
+  .hr {width: 100%; height: 1px; margin: 48px 0; background-color: #d6dbdf;}
+  </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- custom css file  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/twentytwenty.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="icon" href="./assets/pac_man.svg">
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop head">
+      <div class="columns is-centered">
+        <div class="column has-text-centered head">
+<!--          <div class="logo">-->
+<!--          <a href="index.html">-->
+<!--            &lt;!&ndash; <img src="./assets/images/propainter_logo1" width=200px alt="Logo"> &ndash;&gt;-->
+<!--            <img src="./assets/images/propainter_logo1" onmouseover="this.src='./assets/images/propainter_logo2';" onmouseout="this.src='./assets/images/propainter_logo1';">-->
+<!--          </a>-->
+<!--          </div>-->
+          <br>
+
+          <h1 class="title is-2 publication-title">
+            EMAGE: Towards Unified Holistic Co-Speech Gesture Generation via Expressive Masked Audio Gesture Modeling
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://h-liu1997.github.io/" target="_blank">Haiyang Liu</a><sup>1*</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://zzhat0706.github.io/PersonalPage/" target="_blank">Zihao Zhu</a><sup>2*</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://ps.is.mpg.de/person/gbecherini" target="_blank">Giorgio Becherini</a><sup>3</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=9sWVrREAAAAJ&hl=en" target="_blank">Yichen Peng</a><sup>4</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://pantomatrix.github.io/DisCo/" target="_blank">Mingyang Su</a><sup>5</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://pantomatrix.github.io/DisCo/" target="_blank">You Zhou</a><sup>6</sup>,&nbsp;
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://scholars.cityu.edu.hk/en/persons/xuefei-zhe(2af95965-1271-463e-9dcd-8ba9a3a324a4)/publications.html" target="_blank">Xuefei Zhe</a><sup>6</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://iwanao731.github.io/" target="_blank">Naoya Iwamoto</a><sup>6</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="http://www.bozheng-lab.com/" target="_blank">Bo Zheng</a><sup>6</sup>,&nbsp;
+            </span>
+            <span class="author-block">
+              <a href="https://ps.is.mpg.de/person/black" target="_blank">Michael J. Black</a><sup>3</sup>&nbsp;
+            </span>
+
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>The University of Tokyo</span>,
+            <span class="author-block"><sup>2</sup>Keio University</span>,
+            <span class="author-block"><sup>4</sup>Japan Advanced Institute of Science and Technology</span>,
+            <br>
+            <span class="author-block"><sup>3</sup>Max Planck Institute for Intelligent Systems</span>,
+            <span class="author-block"><sup>5</sup>Tsinghua University</span>
+            <span class="author-block"><sup>6</sup>Digital Human Lab, HuaWei Technologies</span>
+          </div>
+
+          <!-- <br>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">NeurIPS 2023 (Dataset and Benchmark Track)</span>
+          </div> -->
+       
+          <br>
+          <div class="column is-centered has-text-centered">
+            <img style="width: 80%;" src="./assets/video_t.gif">
+          </div>
+          <br>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2309.17448" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- PDF Link. -->
+              <!-- <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper(Coming Soon)</span>
+                </a>
+              </span> -->
+
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/DepTqbPpVzY" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://youtu.be/DepTqbPpVzY" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-dataset"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/caizhongang/EMAGE" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+              <!-- Demo Link. -->
+              <span class="link-block">
+                <a href="" target="_blank"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>🤗&nbsp;Demo (Coming Soon)</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-full">
+            <h2 class="title is-3">Foundation Models</h2>
+        </div>
+      </div> -->
+        <!-- <div class="column is-centered has-text-centered">
+          <img style="width: 100%;" src="./assets/emage_t.png">
+        </div>
+      </div>
+  </div>
+</section> --> 
+<!-- Abstract. -->
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Expressive human pose and shape estimation (EHPS) unifies body, hands, and
+            face motion capture with numerous applications. Despite encouraging progress,
+            current state-of-the-art methods still depend largely on confined training datasets.
+            In this work, we investigate scaling up EHPS towards the first generalist foundation
+            model (dubbed EMAGE), with up to ViT-Huge as the backbone and training
+            with up to 4.5M instances from diverse data sources. With big data and the large
+            model, EMAGE exhibits strong performance across diverse test benchmarks and
+            excellent transferability to even unseen environments. 1) For the data scaling, we
+            perform a systematic investigation on 32 EHPS datasets, encompassing a wide
+            range of scenarios that a model trained on any single dataset cannot handle. More
+            importantly, capitalizing on insights obtained from the extensive benchmarking
+            process, we optimize our training scheme and select datasets that lead to a significant
+            leap in EHPS capabilities. 2) For the model scaling, we take advantage of
+            vision transformers to study the scaling law of model sizes in EHPS. Moreover,
+            our finetuning strategy turn EMAGE into specialist models, allowing them to
+            achieve further performance boosts. Notably, our foundation model EMAGE
+            consistently delivers state-of-the-art results on seven benchmarks such as AGORA
+            (107.2 mm NMVE), UBody (57.4 mm PVE), EgoBody (63.6 mm PVE), and EHF
+            (62.3 mm PVE without finetuning).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- Video -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <!-- <h2 class="title is-3">Video</h2> -->
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/DepTqbPpVzY?si=qSeQuX-bgm_rON7E"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visualizations -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+    <div class="column is-full">
+        <h2 class="title is-3">Qualitative Results</h2>
+    </div>
+    </div>
+
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/01.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/01_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/02.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/02_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/03.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/03_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/04.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/04_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/05.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/05_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/06.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/06_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/07.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/07_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/08.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/08_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+                <div class="item">
+          <div class="twentytwenty-container" data-orientation="horizontal" ratio="0.5556">
+            <div class="desc">SMPL-X Overlay</div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/09.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos_reduced/09_overlay.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!--<section class="section" id="BibTeX">-->
+<!--  <div class="container is-max-desktop content">-->
+<!--    <h2 class="title">BibTeX</h2>-->
+<!--    <pre><code>@InProceedings{zhou2023propainter,-->
+<!--      title     = {{ProPainter}: Improving Propagation and Transformer for Video Inpainting},-->
+<!--      author    = {Zhou, Shangchen and Li, Chongyi and Chan, Kelvin C.K and Loy, Chen Change},-->
+<!--      booktitle = {Proceedings of IEEE International Conference on Computer Vision (ICCV)},-->
+<!--      year      = {2023}-->
+<!--    }</code></pre>-->
+<!--  </div>-->
+<!--</section>-->
+
+
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <div class="columns is-centered"><p>
+            <!-- This website template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io" target="_blank">ProPainter</a>. -->
+          </p></div>
+        </div>
+      </div>
+    </div>
+
+<!--    =================Visitor==========================-->
+<!--    <div class="content has-text-centered" style="padding:0 0 0 0">-->
+<!--      <img src='https://api.infinitescript.com/badgen/count?name=sczhou/ProPainter&ltext=Visitors&color=3977dd' alt='visitors'>-->
+<!--    </div>-->
+
+  </div>
+</footer>
+
+  <!-- custom js file  -->
+  <script defer src="./assets/js/fontawesome.all.min.js"></script>
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/jquery.event.move.js"></script>
+  <script src="./assets/js/jquery.twentytwenty.js"></script>
+  <script>
+  $(function(){
+    $(".twentytwenty-container").twentytwenty();
+    // $(".twentytwenty-container", "#results-carousel").twentytwenty({default_offset_pct: 0.5, ratio: 0.5});
+  });
+  </script>
+</body>
+</html>
