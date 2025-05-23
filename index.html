@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="EMAGE: Towards Unified Holistic Co-Speech Gesture Generation via Expressive Masked Audio Gesture Modeling">
-  <meta name="keywords" content="EMAGE, Co-Speech Gesture Generation, Animation">
+  <meta name="description" content="Intent-Aware Co-Speech Gesture Generation with Spatial Targets: A New Task, Baseline, and Benchmark">
+  <meta name="keywords" content="Co-Speech Gesture Generation, Diffusion Model, Intent-Aware">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>EMAGE</title>
 
@@ -42,145 +42,14 @@
           <br>
 
           <h1 class="title is-2 publication-title">
-            EMAGE: Towards Unified Holistic Co-Speech Gesture Generation via Expressive Masked Audio Gesture Modeling
+            Intent-Aware Co-Speech Gesture Generation with Spatial Targets: A New Task, Baseline, and Benchmark
           </h1>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://h-liu1997.github.io/" target="_blank">Haiyang Liu</a><sup>1*</sup>,&nbsp;
-            </span>
-            <span class="author-block">
-              <a href="https://zzhat0706.github.io/PersonalPage/" target="_blank">Zihao Zhu</a><sup>2*</sup>,&nbsp;
-            </span>
-            <span class="author-block">
-              <a href="https://ps.is.mpg.de/person/gbecherini" target="_blank">Giorgio Becherini</a><sup>3</sup>,&nbsp;
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=9sWVrREAAAAJ&hl=en" target="_blank">Yichen Peng</a><sup>4</sup>,&nbsp;
-            </span>
-            <span class="author-block">
-              <a href="https://pantomatrix.github.io/EMAGE/" target="_blank">Mingyang Su</a><sup>5</sup>,&nbsp;
-            </span>
-            <br>
-            <span class="author-block">
-              <a href="https://pantomatrix.github.io/EMAGE/" target="_blank">You Zhou</a>,&nbsp;
-            </span>
-            
-            <span class="author-block">
-              <a href="https://scholars.cityu.edu.hk/en/persons/xuefei-zhe(2af95965-1271-463e-9dcd-8ba9a3a324a4)/publications.html" target="_blank">Xuefei Zhe</a>,&nbsp;
-            </span>
-            <span class="author-block">
-              <a href="https://pantomatrix.github.io/EMAGE/" target="_blank">Naoya Iwamoto</a>,&nbsp;
-            </span>
-            <span class="author-block">
-              <a href="https://pantomatrix.github.io/EMAGE/" target="_blank">Bo Zheng</a>,&nbsp;
-            </span>
-            <span class="author-block">
-              <a href="https://ps.is.mpg.de/person/black" target="_blank">Michael J. Black</a><sup>3</sup>&nbsp;
-            </span>
-
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <span class="author-block">(<sup>*</sup>Equal Contribution)</span>
-            </span>
-          </div>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>The University of Tokyo</span>,
-            <span class="author-block"><sup>2</sup>Keio University</span>,
-            <span class="author-block"><sup>4</sup>Japan Advanced Institute of Science and Technology</span>,
-            <br>
-            <span class="author-block"><sup>3</sup>Max Planck Institute for Intelligent Systems</span>,
-            <span class="author-block"><sup>5</sup>Tsinghua University</span>
-          </div>
-
-          <!-- <br>
+          <br>
           <div class="is-size-4 publication-authors">
-            <span class="author-block">NeurIPS 2023 (Dataset and Benchmark Track)</span>
-          </div> -->
+            <span class="author-block">NeurIPS 2023</span>
+          </div>
        
-          <br>
-          <div class="column is-centered has-text-centered">
-            <img style="width: 80%;" src="./assets/video_t.gif">
-          </div>
-          <br>
-
-          <div class="column has-text-centered">
-            <div class="publication-links">
-
-              <!-- Demo Link. -->
-              <span class="link-block">
-                <a href="https://colab.research.google.com/drive/1AINafluW6Ba5-KYN_L43eyFK0zRklMvr?usp=sharing" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                  <span>♾️&nbsp;Colab</span>
-                </a>
-              </span>
-
-              <!-- Demo Link. -->
-              <span class="link-block">
-                <a href="https://huggingface.co/spaces/H-Liu1997/EMAGE/" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                  <span>🤗&nbsp;Gradio</span>
-                </a>
-              </span>
-
-              <!-- arXiv Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2401.00374" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-
-              <!-- Video Link. -->
-              <span class="link-block">
-                <a href="https://youtu.be/T0OYPvViFGE" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-
-              <!-- Data Link. -->
-              <span class="link-block">
-                <a href="https://drive.google.com/drive/folders/1ukbifhHc85qWTzspEgvAxCXwn9mK4ifr?usp=drive_link" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-database"></i>
-                  </span>
-                  <span>Dataset</span>
-                </a>
-              </span>
-
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://github.com/PantoMatrix/PantoMatrix/tree/main/scripts/EMAGE_2024" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
-              </span>
-
-              <!-- Blender Link. -->
-              <span class="link-block">
-                <a href="https://drive.google.com/drive/folders/1ukbifhHc85qWTzspEgvAxCXwn9mK4ifr?usp=drive_link" target="_blank"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-tools"></i>
-                  </span>
-                  <span>Blender Add-On</span>
-                  </a>
-              </span>
-
-            </div>
-          </div>
         </div>
       </div>
     </div>
